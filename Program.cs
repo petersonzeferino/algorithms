@@ -7,70 +7,94 @@ namespace Algorithms
     {
         static void Main(string[] args)
         {
-            int resultMdcList;
-            int[] resultCalculeStates;
-            string textResultCalculeStates = String.Empty;
-            string textTopNCompetitors = String.Empty;
-
-            //int[] numberList = new int[] { 2, 3, 4, 5, 6 };
-            int[] numberList = new int[] { 2, 4, 6, 8, 10 };
-
-            resultMdcList = mdcList(numberList);
-
-            //int[] states = new int[] { 1, 1, 1, 0, 1, 1, 1, 1 };
-            //int days = 2;
-
-            int[] states = new int[] { 1, 0, 0, 0, 0, 1, 0, 0 };
-            int days = 1;
-
-            resultCalculeStates = calculeStates(states, days);
-
-            //int[] numberList = new int[] { 2, 3, 4, 5, 6 };
-            //int[] numberList = new int[] { 2, 4, 6, 8, 10 };
-
-            //Console.WriteLine(mdcLista(numberList));
-
-            int numCompetitors = 5;
-            int topNCompetitors = 2;
-            List<string> competitors = new List<string> { "anacell", "betacellular", "cetracular", "deltacellular", "eurocell" };
-            int numReviews = 3;
-            List<string> reviews = new List<string> {
-                "Best services provided by anacell",
-                "betacellular has great services",
-                "anacell provides much better services than all other"};
-
-            //int numCompetitors = 5;
-            //int topNCompetitors = 2;
-            //List<string> competitors = new List<string> { "anacell", "betacellular", "cetracular", "deltacellular", "eurocell" };
-            //int numReviews = 5;
-            //List<string> reviews = new List<string> {
-            //    "I love anacell Best services provided by anacell in the town",
-            //    "betacellular has great services",
-            //    "deltacellular provides much better services than betacellular",
-            //    "cetracular is worse than eurocell",
-            //    "betacellular is better than deltacellular"};
-
-            var resultTopNCompetitors = TopNCompetitors(numCompetitors, topNCompetitors, competitors, numReviews, reviews);
-            
-            Console.WriteLine();
-
-            foreach (var item in resultCalculeStates)
-            {
-                textResultCalculeStates += item + " ";
-            }
-
-            foreach (var item in resultTopNCompetitors)
-            {
-                textTopNCompetitors += item + " ";
-            }
-
             Console.WriteLine(
-                                "Result of MDC: " + resultMdcList.ToString() +
+                                "SELECT THE ALGORITHMS AND PRESS ENTER" + 
                                 "\r\n" +
-                                "Result of States: " + textResultCalculeStates +
+                                "1 - MDC " + 
                                 "\r\n" +
-                                "Result of Top Competitors: " + textTopNCompetitors
+                                "2 - Calcule States " +
+                                "\r\n" +
+                                "3 - Top Competitors "
                              );
+
+            var option  = Console.ReadLine();
+
+            switch (option)
+            {
+                case "1":
+                    int resultMdcList;
+
+                    //int[] numberList = new int[] { 2, 3, 4, 5, 6 };
+                    int[] numberList = new int[] { 2, 4, 6, 8, 10 };                    
+
+                    resultMdcList = mdcList(numberList);
+
+                    Console.WriteLine( "Result of MDC: " + resultMdcList.ToString() );
+
+                    break;
+                case "2":
+                    int[] resultCalculeStates;
+                    string textResultCalculeStates = String.Empty;
+
+                    //int[] states = new int[] { 1, 1, 1, 0, 1, 1, 1, 1 };
+                    //int days = 2;
+
+                    int[] states = new int[] { 1, 0, 0, 0, 0, 1, 0, 0 };
+                    int days = 1;
+
+                    resultCalculeStates = calculeStates(states, days);
+
+                    foreach (var item in resultCalculeStates)
+                    {
+                        textResultCalculeStates += item + " ";
+                    }
+
+                    Console.WriteLine( "Result of States: " + textResultCalculeStates );
+
+                    break;
+                case "3":
+                    int numCompetitors = 5;
+                    int topNCompetitors = 2;
+                    int numReviews = 3;
+                    string textTopNCompetitors = String.Empty;
+
+                    List<string> competitors = 
+                        new List<string> {
+                                            "anacell", "betacellular", "cetracular", "deltacellular", "eurocell"
+                                         };
+                    
+                    List<string> reviews = 
+                        new List<string> {
+                                            "Best services provided by anacell",
+                                            "betacellular has great services",
+                                            "anacell provides much better services than all other"
+                                         };
+
+                    //int numCompetitors = 5;
+                    //int topNCompetitors = 2;
+                    //List<string> competitors = new List<string> { "anacell", "betacellular", "cetracular", "deltacellular", "eurocell" };
+                    //int numReviews = 5;
+                    //List<string> reviews = new List<string> {
+                    //    "I love anacell Best services provided by anacell in the town",
+                    //    "betacellular has great services",
+                    //    "deltacellular provides much better services than betacellular",
+                    //    "cetracular is worse than eurocell",
+                    //    "betacellular is better than deltacellular"};
+
+                    var resultTopNCompetitors = TopNCompetitors(numCompetitors, topNCompetitors, competitors, numReviews, reviews);
+
+                    foreach (var item in resultTopNCompetitors)
+                    {
+                        textTopNCompetitors += item + " ";
+                    }
+
+                    Console.WriteLine("Result of Top Competitors: " + textTopNCompetitors);
+
+                    break;
+                default:
+                    Console.WriteLine("SELECT A VALID OPTION AND TRY AGAIN");
+                    break;
+            }                        
         }
 
         #region MDC
