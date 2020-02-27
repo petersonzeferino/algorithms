@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+using System.Collections.Generic;
 
 namespace Algorithms
 {
@@ -9,6 +10,7 @@ namespace Algorithms
             int resultMdcList;
             int[] resultCalculeStates;
             string textResultCalculeStates = String.Empty;
+            string textTopNCompetitors = String.Empty;
 
             //int[] numberList = new int[] { 2, 3, 4, 5, 6 };
             int[] numberList = new int[] { 2, 4, 6, 8, 10 };
@@ -23,17 +25,55 @@ namespace Algorithms
 
             resultCalculeStates = calculeStates(states, days);
 
-            for (int i = 0; i < resultCalculeStates.Length; i++)
+            //int[] numberList = new int[] { 2, 3, 4, 5, 6 };
+            //int[] numberList = new int[] { 2, 4, 6, 8, 10 };
+
+            //Console.WriteLine(mdcLista(numberList));
+
+            int numCompetitors = 5;
+            int topNCompetitors = 2;
+            List<string> competitors = new List<string> { "anacell", "betacellular", "cetracular", "deltacellular", "eurocell" };
+            int numReviews = 3;
+            List<string> reviews = new List<string> {
+                "Best services provided by anacell",
+                "betacellular has great services",
+                "anacell provides much better services than all other"};
+
+            //int numCompetitors = 5;
+            //int topNCompetitors = 2;
+            //List<string> competitors = new List<string> { "anacell", "betacellular", "cetracular", "deltacellular", "eurocell" };
+            //int numReviews = 5;
+            //List<string> reviews = new List<string> {
+            //    "I love anacell Best services provided by anacell in the town",
+            //    "betacellular has great services",
+            //    "deltacellular provides much better services than betacellular",
+            //    "cetracular is worse than eurocell",
+            //    "betacellular is better than deltacellular"};
+
+            var resultTopNCompetitors = TopNCompetitors(numCompetitors, topNCompetitors, competitors, numReviews, reviews);
+            
+            Console.WriteLine();
+
+            foreach (var item in resultCalculeStates)
             {
-                textResultCalculeStates += resultCalculeStates[i].ToString() + " ";
+                textResultCalculeStates += item + " ";
+            }
+
+            foreach (var item in resultTopNCompetitors)
+            {
+                textTopNCompetitors += item + " ";
             }
 
             Console.WriteLine(
                                 "Result of MDC: " + resultMdcList.ToString() +
                                 "\r\n" +
-                                "Result of States: " + textResultCalculeStates
+                                "Result of States: " + textResultCalculeStates +
+                                "\r\n" +
+                                "Result of Top Competitors: " + textTopNCompetitors
                              );
         }
+
+        #region MDC
 
         public static int mdc(int a, int b)
         {
@@ -46,7 +86,6 @@ namespace Algorithms
             return a;
         }
 
-        //Calcule MDC the list of numbers
         public static int mdcList(int[] numberList)
         {
             int mdcResult = numberList[0];
@@ -58,6 +97,9 @@ namespace Algorithms
             return mdcResult;
         }
 
+        #endregion
+
+        #region Calcule States
         public static int[] calculeStates(int[] states, int days)
         {
             int[] cell = new int[8];
@@ -100,6 +142,100 @@ namespace Algorithms
 
             return (cell);
         }
-    }
 
+        #endregion
+
+        #region Top Competitors
+
+        public static List<string> TopNCompetitors(int numCompetitors,
+                                    int topNCompetitors,
+                                    List<string> competitors,
+                                    int numReviews, List<string> reviews)
+        {
+            List<string> result = new List<string>();
+            List<int> listQtd = new List<int>();
+            int controller = 0;
+            int first = 0;
+            int second = 0;
+            int indexFirst = 0;
+            int indexSecond = 0;
+
+            for (int i = 0; i < competitors.Count; i++)
+            {
+                if (result.Count != 0)
+                    controller += 1;
+
+                int qtd = 0;
+
+                for (int p = 0; p < reviews.Count; p++)
+                {
+                    qtd += reviews[p].Split(competitors[i]).Length - 1;
+                }
+
+                listQtd.Add(qtd);
+            }
+
+            for (int i = 0; i < listQtd.Count - 1; i++)
+            {
+                if (i == 0)
+                {
+                    first = listQtd[i];
+                    indexFirst = i;
+                }
+
+                if (listQtd[i] < listQtd[i + 1])
+                {
+                    if (listQtd[i + 1] > first)
+                    {
+                        first = listQtd[i + 1];
+                        indexFirst = i + 1;
+                    }
+
+                }
+            }
+
+            for (int i = 0; i < listQtd.Count - 1; i++)
+            {
+                if (i != indexFirst)
+                {
+                    if (i == 0)
+                    {
+                        second = listQtd[i];
+                        indexSecond = i;
+                    }
+
+                    if (i + 1 == indexFirst)
+                    {
+                        second = listQtd[i];
+                        indexSecond = i;
+                    }
+                    else
+                    {
+                        if (second == 0)
+                        {
+                            second = listQtd[i];
+                            indexSecond = i;
+                        }
+                    }
+
+                    if (listQtd[i] < listQtd[i + 1])
+                    {
+                        second = listQtd[i + 1];
+                        indexSecond = i;
+                    }
+
+                }
+            }
+
+            result.Add(competitors[indexFirst]);
+            result.Add(competitors[indexSecond]);
+
+            return result;
+        }
+
+
+        }
+
+        #endregion
+    
 }
