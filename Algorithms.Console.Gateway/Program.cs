@@ -17,7 +17,9 @@ namespace Algorithm
                                 "\r\n" +
                                 "2 - Calcule States " +
                                 "\r\n" +
-                                "3 - Top Competitors "
+                                "3 - Top Competitors " +
+                                "\r\n" +
+                                "4 - Create and read in file "
                              );
 
             var option = Console.ReadLine();
@@ -58,6 +60,10 @@ namespace Algorithm
                     }
 
                     Console.WriteLine("Result of Top Competitors: " + textTopNCompetitors);
+
+                    break;
+                case "4":
+                    _algorithmsService.CreateAndReadInFile();
 
                     break;
                 default:

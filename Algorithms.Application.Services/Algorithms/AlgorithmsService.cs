@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Algorithms.Application.Component;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -384,5 +387,50 @@ namespace Algorithms.Application.Services.Algorithms
         }
 
         #endregion
+
+        #region Write in File
+
+        public void CreateAndReadInFile(int numberRows, string rootPath)
+        {
+            var fileName = GenerateFile(rootPath, numberRows);
+
+            Console.WriteLine("##########");
+            Console.WriteLine("Try to find a row in a large file");
+            string path = Path.Combine(rootPath, fileName);
+
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+            bool contains = File.ReadLines(path).Contains("91820988163");
+            stopwatch.Stop();
+            Console.WriteLine("Time elipsed to try find a value: {0}", stopwatch.ElapsedMilliseconds);
+            Console.WriteLine($"Find something: {0}", contains);
+        }
+
+        private string GenerateFile(string rootPath, int numRows)
+        {
+            string filename = $"file_{numRows}_rows.txt";
+            string path = Path.Combine(rootPath, filename);
+
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+
+            string[] lista = new string[numRows];
+
+            for (int i = 0; i < numRows; i++)
+            {
+                lista[i] = Utils.GenerateCpf();
+            }
+
+            File.WriteAllLines(path, lista);
+
+            stopwatch.Stop();
+
+            Console.WriteLine("Time elipsed to generate test file: {0}", stopwatch.ElapsedMilliseconds);
+
+            return filename;
+        }
+
+        #endregion
+
     }
 }

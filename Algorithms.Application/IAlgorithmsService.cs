@@ -22,5 +22,7 @@ namespace Algorithms.Application
         public int[] CalculeStates(int[] states, int days);
 
         public int MDC(int[] numberList);
+
+        public void CreateAndReadInFile(int numberRows = 1_000_000, string rootPath = @"C:\");
     }
 }
