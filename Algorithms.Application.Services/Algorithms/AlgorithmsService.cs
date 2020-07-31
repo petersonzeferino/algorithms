@@ -73,6 +73,7 @@ namespace Algorithms.Application.Services.Algorithms
             //int[] numberList = new int[] { 2, 4, 6, 8, 10 };
 
             //mdcList(numberList);
+
         }
 
         #region Calcule States
@@ -428,6 +429,26 @@ namespace Algorithms.Application.Services.Algorithms
             Console.WriteLine("Time elipsed to generate test file: {0}", stopwatch.ElapsedMilliseconds);
 
             return filename;
+        }
+
+        #endregion
+
+        #region
+
+        public int NumberOfPairs(int[] sockets)
+        {
+            if (sockets.Length <= 0)
+                return 0;
+
+            //int numberOfPairs = 0;
+            //var newSockets = sockets.CopyTo();
+
+            //while (sockets.Length == 1)
+            //{
+            //    sockets.CopyTo      
+            //}
+
+            return 0;
         }
 
         #endregion

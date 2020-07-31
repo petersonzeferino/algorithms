@@ -64,8 +64,12 @@ namespace Algorithm
                     break;
                 case "4":
                     _algorithmsService.CreateAndReadInFile();
-
                     break;
+                case "5":
+                    int value = _algorithmsService.NumberOfPairs(TestCaseNumberOfPairs());
+
+                    Console.WriteLine($"Number of pairs is {value}");
+                    break;                    
                 default:
                     Console.WriteLine("SELECT A VALID OPTION AND TRY AGAIN");
                     break;
@@ -132,11 +136,16 @@ namespace Algorithm
             return entity;
         }
 
-        #endregion
+        public static int[] TestCaseNumberOfPairs() 
+        {
+            return new int[] { 10, 20, 20, 10, 10, 30, 50, 10, 20 };
+        }
 
-        #region
+    #endregion
 
-        public class TestCaseCalculeStatesEntity
+    #region
+
+    public class TestCaseCalculeStatesEntity
         {
             public int[] States { get; set; }
             public int Days { get; set; }
