@@ -440,15 +440,24 @@ namespace Algorithms.Application.Services.Algorithms
             if (sockets.Length <= 0)
                 return 0;
 
-            //int numberOfPairs = 0;
-            //var newSockets = sockets.CopyTo();
+            List<int> ListSockets = new List<int>(sockets);
+            int count = 0;
 
-            //while (sockets.Length == 1)
-            //{
-            //    sockets.CopyTo      
-            //}
+            while (ListSockets.Count >= 1)
+            {
+                int index = ListSockets.LastIndexOf(ListSockets[0]);
 
-            return 0;
+                if (index > 0)
+                {
+                    ListSockets.RemoveAt(index);                    
+                    count++;
+                }
+
+                ListSockets.RemoveAt(0);
+
+            }
+
+            return count;
         }
 
         #endregion

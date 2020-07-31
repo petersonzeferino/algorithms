@@ -19,7 +19,9 @@ namespace Algorithm
                                 "\r\n" +
                                 "3 - Top Competitors " +
                                 "\r\n" +
-                                "4 - Create and read in file "
+                                "4 - Create and read in file " +
+                                "\r\n" +
+                                "5 - Sock Merchant "
                              );
 
             var option = Console.ReadLine();
