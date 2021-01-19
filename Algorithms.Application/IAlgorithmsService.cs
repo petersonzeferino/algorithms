@@ -26,5 +26,8 @@ namespace Algorithms.Application
         public void CreateAndReadInFile(int numberRows = 1_000_000, string rootPath = @"C:\");
 
         public int NumberOfPairs(int[] sockets);
+
+        public int[] ArrayLeftRotation();
+        
     }
 }

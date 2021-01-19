@@ -460,6 +460,57 @@ namespace Algorithms.Application.Services.Algorithms
             return count;
         }
 
+        public int[] ArrayLeftRotation()
+        {
+            
+            int[] a = new int[] { 1, 2, 3, 4, 5 }; //Param - Array 
+            int d = 4; //Param - Number of Rotation 
+
+            int[] rotLeftArray = new int[a.Length];
+            int size = a.Length;
+
+            for (int p = 0; p < a.Length; p++)
+            {
+                int calcPosition = p - d;
+                int position = 0;
+
+                if (calcPosition > 0)
+                    position = calcPosition;
+                else if (calcPosition < 0)
+                    position = Math.Abs((-size - calcPosition));
+
+                rotLeftArray[position] = a[p];
+            }
+
+            return rotLeftArray;
+
+        }
+
+        //public int[] ArrayReverse()
+        //{
+        //    int[] a = new int[] { 1, 2, 3, 4, 5 };
+        //    int d = 4;
+
+        //    int[] rotLeftArray = new int[a.Length];
+        //    int size = a.Length;
+
+        //    for (int p = 0; p < a.Length; p++)
+        //    {
+        //        int calcPosition = p - d;
+        //        int position = 0;
+
+        //        if (calcPosition > 1)
+        //            position = calcPosition;
+        //        else if (calcPosition <= 0)
+        //            position = Math.Abs(calcPosition);
+
+        //        rotLeftArray[position] = a[p];
+        //    }
+
+        //    return rotLeftArray;
+
+        //}
+
         #endregion
 
     }

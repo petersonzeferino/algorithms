@@ -21,7 +21,9 @@ namespace Algorithm
                                 "\r\n" +
                                 "4 - Create and read in file " +
                                 "\r\n" +
-                                "5 - Sock Merchant "
+                                "5 - Sock Merchant " +
+                                "\r\n" +
+                                 "6 - Array Left Rotation "
                              );
 
             var option = Console.ReadLine();
@@ -71,7 +73,13 @@ namespace Algorithm
                     int value = _algorithmsService.NumberOfPairs(TestCaseNumberOfPairs());
 
                     Console.WriteLine($"Number of pairs is {value}");
-                    break;                    
+                    break;
+                case "6":
+                    _algorithmsService.ArrayLeftRotation();
+
+                    Console.WriteLine($"Array result is {1}");
+                    break;
+
                 default:
                     Console.WriteLine("SELECT A VALID OPTION AND TRY AGAIN");
                     break;
