@@ -433,7 +433,7 @@ namespace Algorithms.Application.Services.Algorithms
 
         #endregion
 
-        #region
+        #region NumberOfPairs
 
         public int NumberOfPairs(int[] sockets)
         {
@@ -459,6 +459,10 @@ namespace Algorithms.Application.Services.Algorithms
 
             return count;
         }
+
+        #endregion
+
+        #region ArrayLeftRotation
 
         public int[] ArrayLeftRotation()
         {

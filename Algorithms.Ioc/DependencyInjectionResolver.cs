@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Algorithms.Application;
+using Algorithms.Application.Services.Algorithms;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -11,7 +13,7 @@ namespace Algorithms.Ioc
         {
             //When you need to include a dependency, follow the example 
             //service.AddScoped<Inteface, Classe>();
-
+            //service.AddScoped<IAlgorithmsService, AlgorithmsService>();
         }
 
     }

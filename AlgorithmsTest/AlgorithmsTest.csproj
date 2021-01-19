@@ -19,4 +19,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Algorithms.Application.Services\Algorithms.Application.Services.csproj" />
+    <ProjectReference Include="..\Algorithms.Application\Algorithms.Application.csproj" />
+  </ItemGroup>
+
 </Project>
