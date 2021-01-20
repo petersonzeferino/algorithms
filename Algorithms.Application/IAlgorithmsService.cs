@@ -28,6 +28,8 @@ namespace Algorithms.Application
         public int NumberOfPairs(int[] sockets);
 
         public int[] ArrayLeftRotation();
-        
+
+        public long RepeatedString(string s, long n);
+
     }
 }
