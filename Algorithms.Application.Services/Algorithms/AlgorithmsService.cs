@@ -524,7 +524,6 @@ namespace Algorithms.Application.Services.Algorithms
 
         public long RepeatedString(string s, long n)
         {
-
             long size = s.Length;
             long repeated = n / size;
             long left = n - (size * repeated);
