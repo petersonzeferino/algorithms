@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
 
 namespace Algorithms.Application.Services.Algorithms
@@ -519,7 +518,6 @@ namespace Algorithms.Application.Services.Algorithms
 
         #endregion
 
-
         #region RepeatedString
 
         public long RepeatedString(string s, long n)
@@ -548,5 +546,7 @@ namespace Algorithms.Application.Services.Algorithms
         }
 
         #endregion
+
+
     }
 }

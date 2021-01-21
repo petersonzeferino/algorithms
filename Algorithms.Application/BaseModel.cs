@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Algorithms.Application
+﻿namespace Algorithms.Application
 {
     public abstract class BaseModel
     {

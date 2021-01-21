@@ -1,9 +1,4 @@
-﻿using Algorithms.Application;
-using Algorithms.Application.Services.Algorithms;
-using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Microsoft.Extensions.DependencyInjection;
 
 namespace Algorithms.Ioc
 {
