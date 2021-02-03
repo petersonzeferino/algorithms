@@ -1,5 +1,6 @@
 ﻿using Algorithms.Application.Component;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -448,7 +449,7 @@ namespace Algorithms.Application.Services.Algorithms
 
                 if (index > 0)
                 {
-                    ListSockets.RemoveAt(index);                    
+                    ListSockets.RemoveAt(index);
                     count++;
                 }
 
@@ -465,7 +466,7 @@ namespace Algorithms.Application.Services.Algorithms
 
         public int[] ArrayLeftRotation()
         {
-            
+
             int[] a = new int[] { 1, 2, 3, 4, 5 }; //Param - Array 
             int d = 4; //Param - Number of Rotation 
 
@@ -553,7 +554,7 @@ namespace Algorithms.Application.Services.Algorithms
         {
             int numberDeletion = 0;
 
-            for (int i = 0; i < s.Length -1; i++)
+            for (int i = 0; i < s.Length - 1; i++)
             {
                 if (s[i] == s[i + 1])
                     numberDeletion++;
@@ -596,9 +597,93 @@ namespace Algorithms.Application.Services.Algorithms
 
         #endregion
 
-        #region
+        #region MakingAnagrams
 
+        //public int CheckMakingAnagrams(string a, string b)
+        //{
+        //    int numberDeletion = 0;
 
+        //    return numberDeletion;
+        //}
+
+        //public int CheckMakingAnagrams(string a, string b)
+        //{
+        //    int count = 0;
+        //    int total = a.Length + b.Length;
+        //    int lastIndex = 0;
+
+        //    if (a.Length < b.Length)
+        //    {
+        //        string[] selected = new string[a.Length];
+
+        //        for (int i = 0; i < b.Length; i++)
+        //        {
+        //            for (int j = 0; j < a.Length; j++)
+        //            {                      
+        //                if (b[i] == a[j])
+        //                {
+
+        //                    if (selected.Where(x => (x == j.ToString())).Count() == 0)
+        //                    {
+        //                        selected[lastIndex] = j.ToString();
+        //                        count++;
+        //                        lastIndex++;
+        //                        break;
+        //                    }
+        //                }
+        //            }
+        //        }
+        //    }
+        //    else
+        //    {
+        //        string[] selected = new string[b.Length];
+
+        //        for (int i = 0; i < a.Length; i++)
+        //        {
+        //            for (int j = 0; j < b.Length; j++)
+        //            {                    
+        //                if (a[i] == b[j])
+        //                {
+
+        //                    if (selected.Where(x => (x == j.ToString())).Count() == 0)
+        //                    {
+        //                        selected[lastIndex] = j.ToString();
+        //                        count++;
+        //                        lastIndex++;
+        //                        break;
+        //                    }
+        //                }
+        //            }
+        //        }
+        //    }
+
+        //    int numberDeletion = (total - (count * 2));
+
+        //    return numberDeletion;
+        //}
+
+        public int CheckMakingAnagrams(string a, string b)
+        {
+            int[] charValues = new int[26];
+            foreach (char c in a)
+            {
+                int cVal = (int)c - 97;//97 is lowercase a
+                                       //Console.Write(cVal+"    "+c);
+                charValues[cVal]++;
+            }
+            foreach (char c in b)
+            {
+                int cVal = (int)c - 97;//97 is lowercase a
+                charValues[cVal]--;
+            }
+            int total = 0;
+            foreach (int i in charValues)
+            {
+                total += Math.Abs(i);
+            }
+
+            return total;
+        }
 
         #endregion
     }
