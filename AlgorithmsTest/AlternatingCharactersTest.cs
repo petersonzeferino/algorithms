@@ -1,5 +1,5 @@
 ﻿using Algorithms.Application;
-using Algorithms.Application.Services.Algorithms;
+using Algorithms.Application.Services;
 using Xunit;
 
 namespace AlgorithmsTest
@@ -14,9 +14,9 @@ namespace AlgorithmsTest
         [InlineData("AAABBB", 4)]
         public void CheckAlgorithmsCharactersSuccess(string input, int output)
         {
-            IAlgorithmsService _algorithmsService = new AlgorithmsService();
+            IAlternatingCharactersService _alternatingCharactersService = new AlternatingCharactersService();
 
-            Assert.Equal(_algorithmsService.CheckAlgorithmsCharacter(input), output);
+            Assert.Equal(_alternatingCharactersService.CheckAlgorithmsCharacter(input), output);
         }
 
     }

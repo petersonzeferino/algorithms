@@ -30,7 +30,7 @@ namespace Algorithms.Application
 
         public long RepeatedString(string s, long n);
 
-        public int CheckAlgorithmsCharacter(string s);
+        //public int CheckAlgorithmsCharacter(string s);
 
         public int CheckFibonacciRecursive(int n);
 

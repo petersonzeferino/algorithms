@@ -550,18 +550,18 @@ namespace Algorithms.Application.Services.Algorithms
 
         #region AlgorithmsCharacter
 
-        public int CheckAlgorithmsCharacter(string s)
-        {
-            int numberDeletion = 0;
+        //public int CheckAlgorithmsCharacter(string s)
+        //{
+        //    int numberDeletion = 0;
 
-            for (int i = 0; i < s.Length - 1; i++)
-            {
-                if (s[i] == s[i + 1])
-                    numberDeletion++;
-            }
+        //    for (int i = 0; i < s.Length - 1; i++)
+        //    {
+        //        if (s[i] == s[i + 1])
+        //            numberDeletion++;
+        //    }
 
-            return numberDeletion;
-        }
+        //    return numberDeletion;
+        //}
 
         #endregion
 
