@@ -20,7 +20,7 @@ namespace AlgorithmsTest.Tests
         {
             ITwoStringsService _twoStringsService = new TwoStringsService();
 
-            Assert.Equal(_twoStringsService.CheckTwoStringsWithSuccess(s1,s2), result);
+            Assert.Equal(_twoStringsService.CheckTwoStrings(s1,s2), result);
         }
 
     }

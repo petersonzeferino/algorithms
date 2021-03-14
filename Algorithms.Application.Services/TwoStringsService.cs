@@ -6,7 +6,7 @@ namespace Algorithms.Application.Services
 {
     public class TwoStringsService : ITwoStringsService
     {
-        public string CheckTwoStringsWithSuccess(string s1, string s2)
+        public string CheckTwoStrings(string s1, string s2)
         {
             //byte[] asciiBytes1 = Encoding.ASCII.GetBytes(s1);
             //byte[] asciiBytes2 = Encoding.ASCII.GetBytes(s2);

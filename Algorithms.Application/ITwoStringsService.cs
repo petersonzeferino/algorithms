@@ -6,6 +6,6 @@ namespace Algorithms.Application
 {
     public interface ITwoStringsService
     {
-        public string CheckTwoStringsWithSuccess(string s1, string s2);
+        public string CheckTwoStrings(string s1, string s2);
     }
 }
