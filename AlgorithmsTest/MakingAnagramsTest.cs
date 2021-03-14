@@ -1,5 +1,5 @@
 ﻿using Algorithms.Application;
-using Algorithms.Application.Services.Algorithms;
+using Algorithms.Application.Services;
 using Xunit;
 
 namespace AlgorithmsTest
@@ -12,9 +12,9 @@ namespace AlgorithmsTest
         [InlineData("showman", "woman", 2)]
         public void CheckMakingAnagramsTestSuccess(string inputStringA, string inputStringB, int output)
         {
-            IAlgorithmsService _algorithmsService = new AlgorithmsService();
+            IMakingAnagrams _makingAnagrams = new MakingAnagrams();
 
-            Assert.Equal(_algorithmsService.CheckMakingAnagrams(inputStringA, inputStringB), output);
+            Assert.Equal(_makingAnagrams.CheckMakingAnagrams(inputStringA, inputStringB), output);
         }
 
     }

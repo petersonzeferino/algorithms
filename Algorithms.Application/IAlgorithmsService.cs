@@ -34,7 +34,7 @@ namespace Algorithms.Application
 
         //public int CheckFibonacciRecursive(int n);
 
-        public int CheckMakingAnagrams(string a, string b);
+        //public int CheckMakingAnagrams(string a, string b);
 
     }
 }
