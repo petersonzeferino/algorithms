@@ -1,4 +1,5 @@
 ﻿using Algorithms.Application;
+using Algorithms.Application.Services;
 using Algorithms.Application.Services.Algorithms;
 using Xunit;
 
@@ -13,9 +14,9 @@ namespace AlgorithmsTest
         [InlineData("A car, a man, a maraca", true)]
         public void CheckPalindromeWithSuccess(string input, bool output)
         {
-            IAlgorithmsService _algorithmsService = new AlgorithmsService();
+            IPalindromeService _palindromeService = new PalindromeService();
 
-            Assert.Equal(_algorithmsService.CheckPalindrome(input), output);
+            Assert.Equal(_palindromeService.CheckPalindrome(input), output);
         }
     }
 }

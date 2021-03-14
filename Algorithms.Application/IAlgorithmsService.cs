@@ -7,7 +7,7 @@ namespace Algorithms.Application
     {
         public bool OddOrEven(int param);
 
-        public bool CheckPalindrome(string param);
+        //public bool CheckPalindrome(string param);
 
         public int CheckOddNumberTimes(List<int> param);
 
