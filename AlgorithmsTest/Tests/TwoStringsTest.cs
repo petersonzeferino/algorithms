@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using Xunit;
 
-namespace AlgorithmsTest
+namespace AlgorithmsTest.Tests
 {
     
     public class TwoStringsTest

@@ -24,4 +24,10 @@
     <ProjectReference Include="..\Algorithms.Application\Algorithms.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Helpers\" />
+    <Folder Include="Fixtures\" />
+    <Folder Include="PageObjects\" />
+  </ItemGroup>
+
 </Project>

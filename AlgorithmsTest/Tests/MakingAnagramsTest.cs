@@ -2,7 +2,7 @@
 using Algorithms.Application.Services;
 using Xunit;
 
-namespace AlgorithmsTest
+namespace AlgorithmsTest.Tests
 {
     public class MakingAnagramsTest
     {
