@@ -31,9 +31,9 @@ namespace Algorithm
             switch (option)
             {
                 case "1":
-                    int resultMdcList = _algorithmsService.MDC(TestCaseMDC());
+                    //int resultMdcList = _algorithmsService.MDC(TestCaseMDC());
 
-                    Console.WriteLine("Result of MDC: " + resultMdcList.ToString());
+                    //Console.WriteLine("Result of MDC: " + resultMdcList.ToString());
                     break;
                 case "2":
                     int[] resultCalculeStates;
@@ -74,10 +74,10 @@ namespace Algorithm
                     Console.WriteLine($"Number of pairs is {value}");
                     break;
                 case "6":
-                    _algorithmsService.ArrayLeftRotation();
+                    //_algorithmsService.ArrayLeftRotation();
 
-                    Console.WriteLine($"Array result is {1}");
-                    break;
+                    //Console.WriteLine($"Array result is {1}");
+                    //break;
 
                 default:
                     Console.WriteLine("SELECT A VALID OPTION AND TRY AGAIN");
