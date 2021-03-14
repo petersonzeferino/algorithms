@@ -1,11 +1,9 @@
 ﻿using Algorithms.Application.Component;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Text.RegularExpressions;
 
 namespace Algorithms.Application.Services.Algorithms
 {
@@ -125,24 +123,24 @@ namespace Algorithms.Application.Services.Algorithms
 
         #region Check Odd Number of Times
 
-        public int CheckOddNumberTimes(List<int> param)
-        {
-            //Write a C# API that receives an array of integers A and returns an integer X; 
-            //the API shall return the integer that occurs an odd number of times.
-            //Considerations:
-            //a)	each integer in the array occurs an even number of times, except for one;
-            //b) for example, given the array A = [6, 1, 5, 6, 9, 9, 5], the API should return 1;
+        //public int CheckOddNumberTimes(List<int> param)
+        //{
+        //    //Write a C# API that receives an array of integers A and returns an integer X; 
+        //    //the API shall return the integer that occurs an odd number of times.
+        //    //Considerations:
+        //    //a)	each integer in the array occurs an even number of times, except for one;
+        //    //b) for example, given the array A = [6, 1, 5, 6, 9, 9, 5], the API should return 1;
 
-            int x = 0;
+        //    int x = 0;
 
-            var obj = param.GroupBy(p => p).Where(p => p.Count() == 1).Select(p => p.Key).ToList();
-            foreach (var aux in obj)
-            {
-                x = 1;
-            }
+        //    var obj = param.GroupBy(p => p).Where(p => p.Count() == 1).Select(p => p.Key).ToList();
+        //    foreach (var aux in obj)
+        //    {
+        //        x = 1;
+        //    }
 
-            return x;
-        }
+        //    return x;
+        //}
 
         #endregion
 
@@ -221,84 +219,84 @@ namespace Algorithms.Application.Services.Algorithms
 
         #region Odd Or Even
 
-        public bool OddOrEven(int param)
-        {
-            //Write a C# API that receives an integer N and returns a Boolean Z; 
-            //the API shall determine if the given integer N is odd or even.
-            //Considerations:
-            //a)	it is ONLY allowed to use addition or subtraction operations;
-            //b)	zero shall be considered as even;
-            //c)	N is an integer which can be negative or positive;
+        //public bool OddOrEven(int param)
+        //{
+        //    //Write a C# API that receives an integer N and returns a Boolean Z; 
+        //    //the API shall determine if the given integer N is odd or even.
+        //    //Considerations:
+        //    //a)	it is ONLY allowed to use addition or subtraction operations;
+        //    //b)	zero shall be considered as even;
+        //    //c)	N is an integer which can be negative or positive;
 
-            if (param == 0)
-                return true;
+        //    if (param == 0)
+        //        return true;
 
-            else if (param > 0)
-            {
-                while (param > 0)
-                    param = param - 2;
+        //    else if (param > 0)
+        //    {
+        //        while (param > 0)
+        //            param = param - 2;
 
-                if (param == 0)
-                    return true;
+        //        if (param == 0)
+        //            return true;
 
-                else
-                    return false;
-            }
+        //        else
+        //            return false;
+        //    }
 
-            else
-            {
-                while (param < 0)
-                    param = param + 2;
+        //    else
+        //    {
+        //        while (param < 0)
+        //            param = param + 2;
 
-                if (param == 0)
-                    return true;
-                else
-                    return false;
-            }
-        }
+        //        if (param == 0)
+        //            return true;
+        //        else
+        //            return false;
+        //    }
+        //}
 
         #endregion
 
         #region Search Word In Matrix
 
-        public bool SearchWordInMatrix(string[,] M, string S)
-        {
-            //Write a C# API that receives a matrix of characters M, a string S and returns a Boolean Z; 
-            //the API shall return if the string S exists in the matrix M;
-            //Considerations:
-            //a)	the search in the matrix can move downwards, to the left and diagonally;
-            //b)	for example, given the matrix M = [S, L, O, C][R, E, S, C][K, D, P, W][N, A, I, T] and the string S = “RDI”, the API should return ‘true’;
+        //public bool SearchWordInMatrix(string[,] M, string S)
+        //{
+        //    //Write a C# API that receives a matrix of characters M, a string S and returns a Boolean Z; 
+        //    //the API shall return if the string S exists in the matrix M;
+        //    //Considerations:
+        //    //a)	the search in the matrix can move downwards, to the left and diagonally;
+        //    //b)	for example, given the matrix M = [S, L, O, C][R, E, S, C][K, D, P, W][N, A, I, T] and the string S = “RDI”, the API should return ‘true’;
 
-            int isValidate = 0;
-            int textLenght = S.Length;
+        //    int isValidate = 0;
+        //    int textLenght = S.Length;
 
-            String[] values = new String[textLenght];
+        //    String[] values = new String[textLenght];
 
-            for (int i = 0; i < S.Length; i++)
-                values[i] = S.Substring(i, 1);
+        //    for (int i = 0; i < S.Length; i++)
+        //        values[i] = S.Substring(i, 1);
 
-            for (int i = 0; i < 4; i++)
-            {
-                for (int j = 0; j < 4; j++)
-                {
-                    var p = 0;
-                    while (values.Length > p)
-                    {
-                        if (M[i, j] == values[p])
-                            isValidate++;
+        //    for (int i = 0; i < 4; i++)
+        //    {
+        //        for (int j = 0; j < 4; j++)
+        //        {
+        //            var p = 0;
+        //            while (values.Length > p)
+        //            {
+        //                if (M[i, j] == values[p])
+        //                    isValidate++;
 
-                        p++;
-                    }
+        //                p++;
+        //            }
 
-                }
-            }
+        //        }
+        //    }
 
-            if (isValidate >= values.Length)
-                return true;
-            else
-                return false;
+        //    if (isValidate >= values.Length)
+        //        return true;
+        //    else
+        //        return false;
 
-        }
+        //}
 
         #endregion
 

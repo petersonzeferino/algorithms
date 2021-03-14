@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Algorithms.Application.Services
@@ -40,6 +41,25 @@ namespace Algorithms.Application.Services
                 else
                     return false;
             }
+        }
+
+        public int CheckOddNumberTimes(List<int> param)
+        {
+            //Write a C# API that receives an array of integers A and returns an integer X; 
+            //the API shall return the integer that occurs an odd number of times.
+            //Considerations:
+            //a)	each integer in the array occurs an even number of times, except for one;
+            //b) for example, given the array A = [6, 1, 5, 6, 9, 9, 5], the API should return 1;
+
+            int x = 0;
+
+            var obj = param.GroupBy(p => p).Where(p => p.Count() == 1).Select(p => p.Key).ToList();
+            foreach (var aux in obj)
+            {
+                x = 1;
+            }
+
+            return x;
         }
     }
 }

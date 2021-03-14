@@ -1,17 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Algorithms.Application
 {
     public interface IAlgorithmsService
     {
-        public bool OddOrEven(int param);
+        //public bool OddOrEven(int param);
 
         //public bool CheckPalindrome(string param);
 
-        public int CheckOddNumberTimes(List<int> param);
+        //public int CheckOddNumberTimes(List<int> param);
 
-        public bool SearchWordInMatrix(String[,] M, String S);
+        //public bool SearchWordInMatrix(String[,] M, String S);
 
         public List<string> TopCompetitors(int numCompetitors,
                                            int topNCompetitors,
