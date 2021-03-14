@@ -20,7 +20,7 @@ namespace AlgorithmsTest.Tests
         [Theory(DisplayName = "Check value is Odd")]
         [InlineData(1, false)]
         [InlineData(5, false)]
-        public void Checkodd(int input, bool output)
+        public void CheckOdd(int input, bool output)
         {
             IOddOrEvenService _oddOrEvenService = new OddOrEvenService();
 
