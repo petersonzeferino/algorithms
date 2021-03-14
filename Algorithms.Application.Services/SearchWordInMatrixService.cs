@@ -6,7 +6,7 @@ namespace Algorithms.Application.Services
 {
     public class SearchWordInMatrixService : ISearchWordInMatrixService
     {
-        public bool SearchWordInMatrix(string[,] M, string S)
+        public bool CheckSearchWordInMatrix(string[,] M, string S)
         {
             //Write a C# API that receives a matrix of characters M, a string S and returns a Boolean Z; 
             //the API shall return if the string S exists in the matrix M;

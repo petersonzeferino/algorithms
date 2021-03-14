@@ -12,7 +12,7 @@ namespace AlgorithmsTest.Tests
     public class TwoStringsTest
     {
 
-        [Theory(DisplayName = "Check value is palindrome")]
+        [Theory(DisplayName = "Check two strings")]
         [InlineData("beetroot", "sandals", "NO")]
         //[InlineData("and", "art", "YES")]
         //[InlineData("hackerrankcommunity", "cdecdecdecde", "YES")]

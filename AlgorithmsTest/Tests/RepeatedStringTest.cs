@@ -6,7 +6,7 @@ namespace AlgorithmsTest.Tests
 {
     public class RepeatedStringTest
     {
-        [Theory(DisplayName = "Check value is palindrome")]
+        [Theory(DisplayName = "Check repeated string")]
         [InlineData("aba", 10, 7)]
         [InlineData("a", 1000000000000, 1000000000000)]
         [InlineData("kmretasscityylpdhuwjirnqimlkcgxubxmsxpypgzxtenweirknjtasxtvxemtwxuarabssvqdnktqadhyktagjxoanknhgilnm", 736778906400, 51574523448)]

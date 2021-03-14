@@ -6,6 +6,6 @@ namespace Algorithms.Application
 {
     public interface ISearchWordInMatrixService
     {
-        public bool SearchWordInMatrix(String[,] M, String S);
+        public bool CheckSearchWordInMatrix(string[,] M, string S);
     }
 }
