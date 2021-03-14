@@ -1,4 +1,5 @@
 using Algorithms.Application;
+using Algorithms.Application.Services;
 using Algorithms.Application.Services.Algorithms;
 using Xunit;
 
@@ -11,9 +12,9 @@ namespace AlgorithmsTest
         [InlineData(10, true)]
         public void CheckEven(int input, bool output)
         {
-            IAlgorithmsService _algorithmsService = new AlgorithmsService();
+            IOddOrEvenService _oddOrEvenService = new OddOrEvenService();
 
-            Assert.Equal(_algorithmsService.OddOrEven(input), output);
+            Assert.Equal(_oddOrEvenService.OddOrEven(input), output);
         }
 
         [Theory(DisplayName = "Check value is Odd")]
@@ -21,9 +22,9 @@ namespace AlgorithmsTest
         [InlineData(5, false)]
         public void Checkodd(int input, bool output)
         {
-            IAlgorithmsService _algorithmsService = new AlgorithmsService();
+            IOddOrEvenService _oddOrEvenService = new OddOrEvenService();
 
-            Assert.Equal(_algorithmsService.OddOrEven(input), output);
+            Assert.Equal(_oddOrEvenService.OddOrEven(input), output);
         }        
 
     }
