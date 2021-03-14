@@ -567,33 +567,33 @@ namespace Algorithms.Application.Services.Algorithms
 
         #region FibonacciRecursive
 
-        public int CheckFibonacci(int n)
-        {
-            int firstnumber = 0, secondnumber = 1, result = 0;
+        //public int CheckFibonacci(int n)
+        //{
+        //    int firstnumber = 0, secondnumber = 1, result = 0;
 
-            if (n == 0) return 0; //To return the first Fibonacci number   
-            if (n == 1) return 1; //To return the second Fibonacci number   
+        //    if (n == 0) return 0; //To return the first Fibonacci number   
+        //    if (n == 1) return 1; //To return the second Fibonacci number   
 
 
-            for (int i = 2; i <= n; i++)
-            {
-                result = firstnumber + secondnumber;
-                firstnumber = secondnumber;
-                secondnumber = result;
-            }
+        //    for (int i = 2; i <= n; i++)
+        //    {
+        //        result = firstnumber + secondnumber;
+        //        firstnumber = secondnumber;
+        //        secondnumber = result;
+        //    }
 
-            return result;
-        }
+        //    return result;
+        //}
 
-        public int CheckFibonacciRecursive(int n)
-        {
-            if (n == 0)
-                return 0;
-            if (n == 1)
-                return 1;
+        //public int CheckFibonacciRecursive(int n)
+        //{
+        //    if (n == 0)
+        //        return 0;
+        //    if (n == 1)
+        //        return 1;
 
-            return CheckFibonacciRecursive(n - 1) + CheckFibonacciRecursive(n - 2);
-        }
+        //    return CheckFibonacciRecursive(n - 1) + CheckFibonacciRecursive(n - 2);
+        //}
 
         #endregion
 

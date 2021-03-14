@@ -32,7 +32,7 @@ namespace Algorithms.Application
 
         //public int CheckAlgorithmsCharacter(string s);
 
-        public int CheckFibonacciRecursive(int n);
+        //public int CheckFibonacciRecursive(int n);
 
         public int CheckMakingAnagrams(string a, string b);
 
