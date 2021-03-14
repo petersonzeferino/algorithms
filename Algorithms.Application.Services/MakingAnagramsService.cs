@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Algorithms.Application.Services
 {
-    public class MakingAnagrams : IMakingAnagrams
+    public class MakingAnagramsService : IMakingAnagramsService
     {
         public int CheckMakingAnagrams(string a, string b)
         {

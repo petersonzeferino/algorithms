@@ -12,7 +12,7 @@ namespace AlgorithmsTest
         [InlineData("showman", "woman", 2)]
         public void CheckMakingAnagramsTestSuccess(string inputStringA, string inputStringB, int output)
         {
-            IMakingAnagrams _makingAnagrams = new MakingAnagrams();
+            IMakingAnagramsService _makingAnagrams = new MakingAnagramsService();
 
             Assert.Equal(_makingAnagrams.CheckMakingAnagrams(inputStringA, inputStringB), output);
         }
