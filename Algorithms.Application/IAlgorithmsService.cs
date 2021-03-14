@@ -28,7 +28,7 @@ namespace Algorithms.Application
 
         public int[] ArrayLeftRotation();
 
-        public long RepeatedString(string s, long n);
+        //public long RepeatedString(string s, long n);
 
         //public int CheckAlgorithmsCharacter(string s);
 

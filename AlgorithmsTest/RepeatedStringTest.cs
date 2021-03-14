@@ -1,5 +1,5 @@
 ﻿using Algorithms.Application;
-using Algorithms.Application.Services.Algorithms;
+using Algorithms.Application.Services;
 using Xunit;
 
 namespace AlgorithmsTest
@@ -12,9 +12,9 @@ namespace AlgorithmsTest
         [InlineData("kmretasscityylpdhuwjirnqimlkcgxubxmsxpypgzxtenweirknjtasxtvxemtwxuarabssvqdnktqadhyktagjxoanknhgilnm", 736778906400, 51574523448)]
         public void CheckRepeatedString(string inputString, long inputNumberRepeat, long output)
         {
-            IAlgorithmsService _algorithmsService = new AlgorithmsService();
+            IRepeatedStringService _repeatedStringService = new RepeatedStringService();
 
-            Assert.Equal(_algorithmsService.RepeatedString(inputString, inputNumberRepeat), output);
+            Assert.Equal(_repeatedStringService.RepeatedString(inputString, inputNumberRepeat), output);
         }
     }
 }

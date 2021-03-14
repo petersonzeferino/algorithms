@@ -521,30 +521,30 @@ namespace Algorithms.Application.Services.Algorithms
 
         #region RepeatedString
 
-        public long RepeatedString(string s, long n)
-        {
-            long size = s.Length;
-            long repeated = n / size;
-            long left = n - (size * repeated);
-            int extra = 0;
+        //public long RepeatedString(string s, long n)
+        //{
+        //    long size = s.Length;
+        //    long repeated = n / size;
+        //    long left = n - (size * repeated);
+        //    int extra = 0;
 
-            int count = 0;
-            for (int i = 0; i < size; i++)
-            {
-                if (s[i] == 'a')
-                    ++count;
-            }
+        //    int count = 0;
+        //    for (int i = 0; i < size; i++)
+        //    {
+        //        if (s[i] == 'a')
+        //            ++count;
+        //    }
 
-            for (int i = 0; i < left; i++)
-            {
-                if (s[i] == 'a')
-                    ++extra;
-            }
+        //    for (int i = 0; i < left; i++)
+        //    {
+        //        if (s[i] == 'a')
+        //            ++extra;
+        //    }
 
-            repeated = (repeated * count) + extra;
+        //    repeated = (repeated * count) + extra;
 
-            return repeated;
-        }
+        //    return repeated;
+        //}
 
         #endregion
 
