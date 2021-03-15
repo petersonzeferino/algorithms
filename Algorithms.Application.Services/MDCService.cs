@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Algorithms.Application.Services
 {
-    public class MDCService
+    public class MDCService : IMDCService
     {
         public int ListMDC(int[] numberList)
         {

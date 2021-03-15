@@ -6,12 +6,8 @@ namespace Algorithms.Application.Services
 {
     public class LeftRotationService : ILeftRotationService
     {
-        public int[] ArrayLeftRotation()
+        public int[] ArrayLeftRotation(int[] a, int d)
         {
-
-            int[] a = new int[] { 1, 2, 3, 4, 5 }; //Param - Array 
-            int d = 4; //Param - Number of Rotation 
-
             int[] rotLeftArray = new int[a.Length];
             int size = a.Length;
 

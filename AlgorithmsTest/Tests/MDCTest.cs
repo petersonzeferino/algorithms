@@ -1,17 +1,34 @@
-﻿using System;
+﻿using Algorithms.Application;
+using Algorithms.Application.Services;
+using System;
 using System.Collections.Generic;
 using System.Text;
+using Xunit;
 
 namespace AlgorithmsTest.Tests
 {
     public class MDCTest
     {
-        //public static int[] TestCaseMDC()
-        //{
-        //    //int[] numberList = new int[] { 2, 3, 4, 5, 6 };
-        //    int[] numberList = new int[] { 2, 4, 6, 8, 10 };
+        [Fact(DisplayName = "Check number of pairs")]
+        public void CheckNumberOfPairsTestSuccess()
+        {
+            IMDCService _mDCService = new MDCService();
+            
+            int[] input = new int[] { 2, 4, 6, 8, 10 };
+            int output = 2;
 
-        //    return numberList;
-        //}
+            Assert.Equal(_mDCService.ListMDC(input), output);
+        }
+
+        [Fact(DisplayName = "Check number of pairs - second test case")]
+        public void CheckNumberOfPairsSecondTestSuccess()
+        {
+            IMDCService _mDCService = new MDCService();
+
+            int[] input = new int[] { 2, 3, 4, 5, 6 };
+            int output = 1;
+
+            Assert.Equal(_mDCService.ListMDC(input), output);
+        }
     }
 }
