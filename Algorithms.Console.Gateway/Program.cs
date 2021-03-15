@@ -69,9 +69,9 @@ namespace Algorithm
                     _algorithmsService.CreateAndReadInFile();
                     break;
                 case "5":
-                    int value = _algorithmsService.NumberOfPairs(TestCaseNumberOfPairs());
+                    //int value = _algorithmsService.NumberOfPairs(TestCaseNumberOfPairs());
 
-                    Console.WriteLine($"Number of pairs is {value}");
+                    //Console.WriteLine($"Number of pairs is {value}");
                     break;
                 case "6":
                     //_algorithmsService.ArrayLeftRotation();
