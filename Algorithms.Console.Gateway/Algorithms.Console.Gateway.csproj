@@ -11,8 +11,4 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.4" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Algorithms.Ioc\Algorithms.Ioc.csproj" />
-  </ItemGroup>
-
 </Project>

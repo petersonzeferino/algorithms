@@ -9,7 +9,7 @@ namespace Algorithms.Application.Services
     {
         public string CheckRansomNote(string s1, string s2)
         {
-            int index = 0;
+            //int index = 0;
 
             string[] magazine = s1.Split(' ');
             string[] note = s2.Split(' ');
