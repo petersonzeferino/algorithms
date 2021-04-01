@@ -17,5 +17,3 @@ Run the tests in: **AlgorithmsTest/Tests**
 - Asp.net Core 3.1
 - Visual Studio 2019
 - [Git](https://github.com/git/git)
-
-[![HitCount](http://hits.dwyl.com/petersonzeferino/Algorithms.svg)](http://hits.dwyl.com/petersonzeferino/Algorithms)
