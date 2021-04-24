@@ -1,0 +1,27 @@
+name: .NET
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+   
+    env:
+      CAMINHO_PROJETO_TESTES: ./src/Algorithms.sln
+      CAMINHO_PROJETO_WEBAPP: ./src/AlgorithmsTest/AlgorithmsTest.csproj
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.x
+    - name: Executar testes automatizados
+      run: dotnet test ${{ env.CAMINHO_PROJETO_TESTES }} --verbosity minimal
+    - name: Build com o utilitario dotnet
+      run: dotnet build ${{ env.CAMINHO_PROJETO_WEBAPP }} --configuration Release
