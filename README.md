@@ -17,3 +17,5 @@ Run the tests in: **AlgorithmsTest/Tests**
 - Asp.net Core 3.1
 - Visual Studio 2019
 - [Git](https://github.com/git/git)
+
+[![.NET](https://github.com/petersonzeferino/algorithms/actions/workflows/dotnet.yml/badge.svg?branch=master)](https://github.com/petersonzeferino/algorithms/actions/workflows/dotnet.yml)
