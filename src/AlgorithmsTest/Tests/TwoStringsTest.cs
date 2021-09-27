@@ -10,7 +10,7 @@ namespace AlgorithmsTest.Tests
 
         [Theory(DisplayName = "Check two strings")]
         [InlineData("beetroot", "sandals", "NO")]
-        //[InlineData("and", "art", "YES")]
+        [InlineData("and", "art", "YES")]
         //[InlineData("hackerrankcommunity", "cdecdecdecde", "YES")]
         public void CheckTwoStringsWithSuccess(string s1, string s2, string result)
         {
