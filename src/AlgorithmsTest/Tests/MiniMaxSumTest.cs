@@ -19,26 +19,11 @@ namespace AlgorithmsTest.Tests
             foreach (var item in param.Split(","))
                 arr.Add(Convert.ToInt32(item));
 
-            List<int> arrCopy = arr.ToList();
-            List<long> compare = new List<long>();
+            IMiniMaxSumService _miniMaxSumService = new MiniMaxSumService();
+            var response = _miniMaxSumService.GetMiniMaxSum(arr);
 
-            for (int i = 0; i < arr.Count; i++)
-            {
-                arr.RemoveAt(i);
-                long sum = 0;
-
-                foreach (var item in arr)
-                    sum += item;
-
-                compare.Add(sum);
-
-                arr = arrCopy.ToList();
-            }
-
-            var min = compare.Min();
-            var max = compare.Max();
-
-            Console.WriteLine($"{compare.Min()}" + $"{compare.Max()}");
+            var min = response.Min();
+            var max = response.Max();
 
             var isEqual = false;
             var arrResult = result.Split(",");
