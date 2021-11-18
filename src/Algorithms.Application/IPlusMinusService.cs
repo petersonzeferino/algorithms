@@ -2,7 +2,7 @@
 
 namespace Algorithms.Application
 {
-    public interface IPlusMinus
+    public interface IPlusMinusService
     {
         List<string> GetPlusMinus(List<int> list);
     }

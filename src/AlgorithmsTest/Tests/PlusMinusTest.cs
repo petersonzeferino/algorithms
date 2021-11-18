@@ -10,37 +10,22 @@ namespace AlgorithmsTest.Tests
     public class PlusMinusTest
     {
 
-        [Fact(DisplayName = "PlusMinus")]
-        public void PlusMinusTestWithSuccess()
+        [Theory(DisplayName = "PlusMinus")]
+        [InlineData("4,3,-9,0,4,1")]
+        [InlineData("1,2,3,-1,-2,-3,0,0")]        
+        public void PlusMinusTestWithSuccess(string param)
         {
-            List<int> arr = new List<int>() { -4, 3, -9, 0, 4, 1 };
-            decimal total = arr.Count;
-            decimal zero = 0;
-            decimal negative = 0;
-            decimal positive = 0;
-            List<string> result = new List<string>();
+            IPlusMinusService _plusMinusService = new PlusMinusService();
 
-            foreach (int item in arr)
-            {
-                if (item == 0)
-                    zero++;
-                else if (item < 0)
-                    negative++;
-                else
-                    positive++;
-            }
+            List<int> arr = new List<int>();
+            foreach (var item in param.Split(","))
+                arr.Add(Convert.ToInt32(item));
 
-            var resultPositive = Math.Round(positive / total, 6).ToString("F6").Replace(",", ".");
-            var resultNegative = Math.Round(negative / total, 6).ToString("F6").Replace(",", ".");
-            var resultZero = Math.Round(zero / total, 6).ToString("F6").Replace(",", ".");
+            var result = _plusMinusService.GetPlusMinus(arr);
 
-            Console.WriteLine($"{resultPositive}{Environment.NewLine}" +
-                              $"{resultNegative}{Environment.NewLine}" +
-                              $"{resultZero}");
-
-            result.Add(resultPositive);
-            result.Add(resultNegative);
-            result.Add(resultZero);
+            Console.WriteLine($"{result[0]}{Environment.NewLine}" +
+                  $"{result[1]}{Environment.NewLine}" +
+                  $"{result[2]}");
         }
     }
 }
