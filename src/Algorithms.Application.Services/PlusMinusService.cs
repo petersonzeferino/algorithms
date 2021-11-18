@@ -6,13 +6,14 @@ namespace Algorithms.Application.Services
 {
     public class PlusMinusService : IPlusMinusService
     {
-        public List<string> GetPlusMinus(List<int> arr)
+        public string[] GetPlusMinus(List<int> arr)
         {
             decimal total = arr.Count;
             decimal zero = 0;
             decimal negative = 0;
             decimal positive = 0;
-            List<string> result = new List<string>();
+            //List<string> result = new List<string>();
+            string[] result = new string[3];
 
             foreach (int item in arr)
             {
@@ -28,9 +29,9 @@ namespace Algorithms.Application.Services
             var resultNegative = Math.Round(negative / total, 6).ToString("F6").Replace(",", ".");
             var resultZero = Math.Round(zero / total, 6).ToString("F6").Replace(",", ".");
 
-            result.Add(resultPositive);
-            result.Add(resultNegative);
-            result.Add(resultZero);
+            result.SetValue(resultPositive,0);
+            result.SetValue(resultNegative,1);
+            result.SetValue(resultZero,2);
 
             return result;
         }

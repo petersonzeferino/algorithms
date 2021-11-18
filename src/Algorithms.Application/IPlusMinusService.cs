@@ -4,6 +4,6 @@ namespace Algorithms.Application
 {
     public interface IPlusMinusService
     {
-        List<string> GetPlusMinus(List<int> list);
+        string[] GetPlusMinus(List<int> list);
     }
 }
