@@ -12,7 +12,6 @@ namespace Algorithms.Application.Services
             decimal zero = 0;
             decimal negative = 0;
             decimal positive = 0;
-            //List<string> result = new List<string>();
             string[] result = new string[3];
 
             foreach (int item in arr)
