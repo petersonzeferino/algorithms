@@ -1,12 +1,13 @@
 ﻿using Algorithms.Application;
 using Algorithms.Application.Services;
+using AlgorithmsTest.Bases;
 using System.Collections.Generic;
 using System.Linq;
 using Xunit;
 
 namespace AlgorithmsTest.Tests
 {
-    public class CountingSort1Test
+    public class CountingSort1Test : BaseTest<CountingSort1Test>
     {
         [Theory(DisplayName = "CountingSort1Test")]
         [MemberData(nameof(GetParameters), parameters: 2)]
