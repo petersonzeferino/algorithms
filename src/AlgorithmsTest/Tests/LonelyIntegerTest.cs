@@ -18,9 +18,24 @@ namespace AlgorithmsTest.Tests
                 arr.Add(Convert.ToInt32(item));
 
             ILonelyIntegerService _lonelyIntegerService = new LonelyIntegerService();
-            var response = _lonelyIntegerService.GetLonelyInteger(arr);
+            var response = GetLonelyInteger(arr);
 
             Assert.Equal(response, Convert.ToInt32(result));
+        }
+
+        private int GetLonelyInteger(List<int> arr)
+        {
+            var response = 0;
+            foreach (var item in arr)
+            {
+                if (arr.FindAll(x => x == item).Count == 1)
+                {
+                    response = item;
+                    break;
+                }
+            }
+
+            return response;
         }
     }
 }

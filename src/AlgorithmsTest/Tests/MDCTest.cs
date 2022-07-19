@@ -25,7 +25,29 @@ namespace AlgorithmsTest.Tests
             int[] input = new int[] { 2, 3, 4, 5, 6 };
             int output = 1;
 
-            Assert.Equal(_mDCService.ListMDC(input), output);
+            Assert.Equal(ListMDC(input), output);
+        }
+
+        private int ListMDC(int[] numberList)
+        {
+            int mdcResult = numberList[0];
+
+            for (int i = 1; i < numberList.Length; i++)
+            {
+                mdcResult = CaculeMDC(mdcResult, numberList[i]);
+            }
+            return mdcResult;
+        }
+
+        private int CaculeMDC(int a, int b)
+        {
+            while (b != 0)
+            {
+                int r = a % b;
+                a = b;
+                b = r;
+            }
+            return a;
         }
     }
 }
