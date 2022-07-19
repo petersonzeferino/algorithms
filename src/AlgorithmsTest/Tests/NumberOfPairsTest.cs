@@ -10,8 +10,6 @@ namespace AlgorithmsTest.Tests
         [Fact(DisplayName = "Check number of pairs")]
         public void CheckNumberOfPairsServiceTestSuccess()
         {
-            INumberOfPairsService _numberOfPairsService = new NumberOfPairsService();
-            
             int[] input = new int[] { 10, 20, 20, 10, 10, 30, 50, 10, 20 };
             int output = 3;
 

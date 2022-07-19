@@ -15,8 +15,6 @@ namespace AlgorithmsTest.Tests
         [InlineData("hackerrankcommunity", "cdecdecdecde", "YES")]
         public void CheckTwoStringsWithSuccess(string s1, string s2, string result)
         {
-            ITwoStringsService _twoStringsService = new TwoStringsService();
-
             Assert.Equal(CheckTwoStrings(s1,s2), result);
         }
 

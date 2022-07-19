@@ -12,8 +12,6 @@ namespace AlgorithmsTest.Tests
         [InlineData("kmretasscityylpdhuwjirnqimlkcgxubxmsxpypgzxtenweirknjtasxtvxemtwxuarabssvqdnktqadhyktagjxoanknhgilnm", 736778906400, 51574523448)]
         public void CheckRepeatedString(string inputString, long inputNumberRepeat, long output)
         {
-            IRepeatedStringService _repeatedStringService = new RepeatedStringService();
-
             Assert.Equal(RepeatedString(inputString, inputNumberRepeat), output);
         }
 

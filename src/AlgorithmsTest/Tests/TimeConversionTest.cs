@@ -13,7 +13,6 @@ namespace AlgorithmsTest.Tests
         [InlineData("11:59:59PM", "23:59:59")]
         public void TimeConversionTestWithSuccess(string request, string result)
         {
-            ITimeConversionService _timeConversionService = new TimeConversionService();
             var response = GetTimeConversion(request);
 
             Assert.Equal(response, result);            
@@ -25,7 +24,6 @@ namespace AlgorithmsTest.Tests
         [InlineData("11:59:59PM", "23:59:59")]
         public void TimeConversionV2TestWithSuccess(string request, string result)
         {
-            ITimeConversionService _timeConversionService = new TimeConversionService();
             var response = GetTimeConversionV2(request);
 
             Assert.Equal(response, result);

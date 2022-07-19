@@ -13,8 +13,6 @@ namespace AlgorithmsTest.Tests
         [InlineData("showman", "woman", 2)]
         public void CheckMakingAnagramsTestSuccess(string inputStringA, string inputStringB, int output)
         {
-            IMakingAnagramsService _makingAnagrams = new MakingAnagramsService();
-
             Assert.Equal(CheckMakingAnagrams(inputStringA, inputStringB), output);
         }
 

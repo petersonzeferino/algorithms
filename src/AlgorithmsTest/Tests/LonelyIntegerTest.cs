@@ -17,7 +17,6 @@ namespace AlgorithmsTest.Tests
             foreach (var item in request.Split(","))
                 arr.Add(Convert.ToInt32(item));
 
-            ILonelyIntegerService _lonelyIntegerService = new LonelyIntegerService();
             var response = GetLonelyInteger(arr);
 
             Assert.Equal(response, Convert.ToInt32(result));

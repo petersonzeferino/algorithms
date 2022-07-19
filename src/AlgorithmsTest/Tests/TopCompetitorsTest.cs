@@ -11,8 +11,6 @@ namespace AlgorithmsTest.Tests
         [Fact(DisplayName = "Top Competitors with Success")]
         public void TopCompetitorsTestSuccess()
         {
-            ITopCompetitorsService _topCompetitorsService = new TopCompetitorsService();
-
             int numCompetitors = 5;
             int topNCompetitors = 2;
             int numReviews = 3;

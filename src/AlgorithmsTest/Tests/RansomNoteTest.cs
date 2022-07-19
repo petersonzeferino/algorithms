@@ -15,8 +15,6 @@ namespace AlgorithmsTest.Tests
         [InlineData("ive got a lovely bunch of coconuts", "ive got some coconuts", "No")]
         public void RansomNoteTestSuccess(string s1, string s2, string result)
         {
-            IRansomNoteService _ransomNoteService = new RansomNoteService();
-
             Assert.Equal(CheckRansomNote(s1, s2), result);
         }
 

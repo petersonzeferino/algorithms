@@ -9,19 +9,15 @@ namespace AlgorithmsTest.Tests
         [Fact(DisplayName = "Check number of pairs")]
         public void CheckNumberOfPairsTestSuccess()
         {
-            IMDCService _mDCService = new MDCService();
-            
             int[] input = new int[] { 2, 4, 6, 8, 10 };
             int output = 2;
 
-            Assert.Equal(_mDCService.ListMDC(input), output);
+            Assert.Equal(ListMDC(input), output);
         }
 
         [Fact(DisplayName = "Check number of pairs - second test case")]
         public void CheckNumberOfPairsSecondTestSuccess()
         {
-            IMDCService _mDCService = new MDCService();
-
             int[] input = new int[] { 2, 3, 4, 5, 6 };
             int output = 1;
 

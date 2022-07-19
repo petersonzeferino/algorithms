@@ -21,9 +21,7 @@ namespace AlgorithmsTest.Tests
         [InlineData("A car, a man, a maraca", true)]
         public void CheckPalindromeWithSuccess(string input, bool output)
         {
-            IPalindromeService _palindromeService = new PalindromeService();
-
-            Assert.Equal(_palindromeService.CheckPalindrome(input), output);
+            Assert.Equal(CheckPalindrome(input), output);
         }
 
 

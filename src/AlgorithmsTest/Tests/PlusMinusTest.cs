@@ -14,8 +14,6 @@ namespace AlgorithmsTest.Tests
         [InlineData("1,2,3,-1,-2,-3,0,0", "0.375000,0.375000,0.250000")]
         public void PlusMinusTestWithSuccess(string param, string result)
         {
-            IPlusMinusService _plusMinusService = new PlusMinusService();
-
             List<int> arr = new List<int>();
             foreach (var item in param.Split(","))
                 arr.Add(Convert.ToInt32(item));
@@ -36,7 +34,6 @@ namespace AlgorithmsTest.Tests
 
             Assert.True(isEqual);            
         }
-
 
         private string[] GetPlusMinus(List<int> arr)
         {

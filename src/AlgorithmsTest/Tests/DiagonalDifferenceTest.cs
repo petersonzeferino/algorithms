@@ -14,7 +14,6 @@ namespace AlgorithmsTest.Tests
         [MemberData(nameof(GetParameters), parameters: 3)]
         public void DiagonalDifferenceTestWithSuccess(List<List<int>> arr, int expected)
         {
-            IDiagonalDifferenceService diagonalDifferenceService = new DiagonalDifferenceService();
             var result = CalculeDiagonalDifference(arr);
 
             Assert.Equal(result, expected);

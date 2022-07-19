@@ -19,7 +19,6 @@ namespace AlgorithmsTest.Tests
             foreach (var item in param.Split(","))
                 arr.Add(Convert.ToInt32(item));
 
-            IMiniMaxSumService _miniMaxSumService = new MiniMaxSumService();
             var response = GetMiniMaxSum(arr);
 
             var min = response.Min();

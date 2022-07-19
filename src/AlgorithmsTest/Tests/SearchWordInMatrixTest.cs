@@ -16,8 +16,6 @@ namespace AlgorithmsTest.Tests
         [Fact(DisplayName = "Search Word In Matrix")]
         public void SearchWordInMatrixTestSuccess()
         {
-            ISearchWordInMatrixService _searchWordInMatrixService = new SearchWordInMatrixService();
-
             string[,] M = new string[4, 4] { { "S", "L", "O", "C" }, { "R", "E", "S", "C" }, { "K", "D", "P", "W" }, { "N", "A", "I", "T" } };
             string S = "RDI";
             bool output = true;

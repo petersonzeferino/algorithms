@@ -20,8 +20,6 @@ namespace AlgorithmsTest.Tests
         [InlineData(10, true)]
         public void CheckEven(int input, bool output)
         {
-            IOddOrEvenService _oddOrEvenService = new OddOrEvenService();
-
             Assert.Equal(OddOrEven(input), output);
         }
 
@@ -30,8 +28,6 @@ namespace AlgorithmsTest.Tests
         [InlineData(5, false)]
         public void CheckOdd(int input, bool output)
         {
-            IOddOrEvenService _oddOrEvenService = new OddOrEvenService();
-
             Assert.Equal(OddOrEven(input), output);
         }
 
@@ -86,4 +82,3 @@ namespace AlgorithmsTest.Tests
     }
 
 }
-

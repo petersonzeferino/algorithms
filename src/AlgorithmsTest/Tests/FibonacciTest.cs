@@ -11,8 +11,6 @@ namespace AlgorithmsTest.Tests
         [InlineData(6, 8)]
         public void CheckFibonacciRecursiveWithSuccess(int input, int output)
         {
-            IFibonacciService _fibonacciService = new FibonacciService();
-
             Assert.Equal(CheckFibonacciRecursive(input), output);
         }
 
