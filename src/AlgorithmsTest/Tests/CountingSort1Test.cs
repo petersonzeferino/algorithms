@@ -1,6 +1,4 @@
-﻿using Algorithms.Application;
-using Algorithms.Application.Services;
-using AlgorithmsTest.Bases;
+﻿using AlgorithmsTest.Bases;
 using System.Collections.Generic;
 using System.Linq;
 using Xunit;

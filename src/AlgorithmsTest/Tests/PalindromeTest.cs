@@ -1,6 +1,4 @@
-﻿using Algorithms.Application;
-using Algorithms.Application.Services;
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 using Xunit;
 
 namespace AlgorithmsTest.Tests

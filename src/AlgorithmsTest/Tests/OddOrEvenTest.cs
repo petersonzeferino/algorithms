@@ -1,5 +1,3 @@
-using Algorithms.Application;
-using Algorithms.Application.Services;
 using System.Collections.Generic;
 using System.Linq;
 using Xunit;
@@ -80,5 +78,4 @@ namespace AlgorithmsTest.Tests
             return x;
         }
     }
-
 }

@@ -1,6 +1,4 @@
-﻿using Algorithms.Application;
-using Algorithms.Application.Services;
-using System;
+﻿using System;
 using Xunit;
 
 namespace AlgorithmsTest.Tests

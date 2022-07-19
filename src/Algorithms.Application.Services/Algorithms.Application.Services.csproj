@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Algorithms.Application\Algorithms.Application.csproj" />
     <ProjectReference Include="..\Algorithms.Domain\Algorithms.Domain.csproj" />
   </ItemGroup>
 

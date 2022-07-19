@@ -1,6 +1,4 @@
-﻿using Algorithms.Application;
-using Algorithms.Application.Services;
-using System;
+﻿using System;
 using Xunit;
 
 namespace AlgorithmsTest.Tests
@@ -24,7 +22,7 @@ namespace AlgorithmsTest.Tests
         }
 
         private bool CheckSearchWordInMatrix(string[,] M, string S)
-        {            
+        {
             int isValidate = 0;
             int textLenght = S.Length;
 
