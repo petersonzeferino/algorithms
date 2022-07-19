@@ -26,18 +26,18 @@ namespace AlgorithmsTest.Tests
             Assert.Equal(expected, result);
         }
 
-        [Fact]
-        public void GenerateRandomLowerCaseLetter_ShouldGenerateRandomLowerCaseLetterWithSuccess()
-        {
-            //Arrange
-            string expected = GenerateLetter(GetRandomLowercaseLetter());
+        //[Fact]
+        //public void GenerateRandomLowerCaseLetter_ShouldGenerateRandomLowerCaseLetterWithSuccess()
+        //{
+        //    //Arrange
+        //    string expected = GenerateLetter(GetRandomLowercaseLetter());
 
-            //Act
-            string result = GenerateLetter(GetRandomLowercaseLetter());
+        //    //Act
+        //    string result = GenerateLetter(GetRandomLowercaseLetter());
 
-            //Assert
-            Assert.NotEqual(expected, result);
-        }
+        //    //Assert
+        //    Assert.NotEqual(expected, result);
+        //}
 
         protected string GetAlphabet()
         {

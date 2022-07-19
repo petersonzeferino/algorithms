@@ -14,8 +14,6 @@ namespace AlgorithmsTest.Tests
         [InlineData("AAABBB", 4)]
         public void CheckAlgorithmsCharactersSuccess(string input, int output)
         {
-            IAlternatingCharactersService _alternatingCharactersService = new AlternatingCharactersService();
-
             Assert.Equal(CheckAlgorithmsCharacter(input), output);
         }
 
