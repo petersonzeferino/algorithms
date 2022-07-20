@@ -25,21 +25,21 @@ namespace AlgorithmsTest.Tests
 
             var result = GetLongestConsecutiveSequence(input);
             
-
             Assert.Equal(expected, result);
         }
 
         private int GetLongestConsecutiveSequence(int[] nums)
         {
             HashSet<int> set = new HashSet<int>(nums);
-            int maxCount = 0;
-            int counter = 0;
+            int maxCount = 0;            
 
             for (int i = 0; i < nums.Length; i++)
             {
+                int counter = 0;
+
                 if (!set.Contains(nums[i] - 1))
                 {
-                    counter = 1;
+                    counter++;
                     int current = 1;
 
                     while (set.Contains(nums[i] + current))
